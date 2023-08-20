@@ -1,0 +1,50 @@
+pipeline {
+    agent {
+        docker {
+            image 'maven:3.8.5'
+            args '-v $HOME/.m2:/root/.m2'
+        }
+    }
+
+    environment {
+        MAVEN_CLI_OPTS = "-s .m2/settings.xml --batch-mode"
+        MAVEN_OPTS = "-Dmaven.repo.local=.m2/repository"
+    }
+
+    options {
+        skipStagesAfterUnstable()
+    }
+
+    stages {
+        stage('Test') {
+            steps {
+                sh './mvnw test'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh './mvnw package -DskipTests'
+                archiveArtifacts artifacts: 'target/investimento.jar', allowEmptyArchive: true
+            }
+        }
+
+        stage('Deploy') {
+            when {
+                expression { currentBuild.resultIsBetterOrEqualTo('SUCCESS') }
+            }
+            steps {
+                sh 'echo "Deploy arquivo!"'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Pipeline executado com sucesso!'
+        }
+        failure {
+            echo 'Ocorreu uma falha no pipeline'
+        }
+    }
+}
