@@ -21,7 +21,7 @@
       <submoduleCfg class="empty-list"/>
       <extensions/>
     </scm>
-    <scriptPath>Jenkinsfile</scriptPath>
+    <scriptPath>jenkins/jenkinsfile</scriptPath>
     <lightweight>true</lightweight>
   </definition>
   <triggers/>
