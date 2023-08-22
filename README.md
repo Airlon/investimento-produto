@@ -92,7 +92,13 @@ docker run -p 8080:8080 investimento
 
 http://localhost:8081/
 
-Criar um projeto
+Após acessar o jenkins com o usuario e senha criado, você precisa seguir os passos abaixo:
+
+- criar o projeto Ex: "investimento_produto", configurar o repositório do github e suas credenciais. 
+
+- Você tem que instalar 2 plugins: Docker plugine Docker Pipeline direto no Jenkins caminho:
+  Jenkins > Gerenciar Jenkins > Gerenciar plug-ins > Disponível
+- 
 
 
 ## Terraform com AWS
