@@ -1,0 +1,5 @@
+database-docker/dados/mnesia/rabbit@8d0746f8b5b4/rabbit_serial
+database-docker/postgres-data/postmaster.pid
+database-docker/jenkins/.cache/fontconfig/CACHEDIR.TAG
+database-docker/jenkins/.java/fonts/11.0.19/fcinfo-1-02ac8dbb7077-Linux-5.10.16.3-microsoft-standard-WSL2-en.properties
+database-docker/jenkins/caches/git-b6b909986a9ddb7ba281ec61aed23524/
