@@ -10,7 +10,7 @@ spring:
     url: "jdbc:postgresql://0.0.0.0:5432/investimento"
     username: postgres
     password: 123
-    driver-class-name: org.postgresql.Driver
+    type: com.zaxxer.hikari.HikariDataSource
   jpa:
     properties:
       hibernate:
