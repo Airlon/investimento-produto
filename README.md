@@ -98,8 +98,8 @@ Após acessar o jenkins com o usuario e senha criado, você precisa seguir os pa
 
 - Você tem que instalar 2 plugins: Docker plugine Docker Pipeline direto no Jenkins caminho:
   Jenkins > Gerenciar Jenkins > Gerenciar plug-ins > Disponível
-- 
 
+- Clicar em construir agora.
 
 ## Terraform com AWS
 
