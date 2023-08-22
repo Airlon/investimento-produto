@@ -9,7 +9,8 @@
       <configVersion>2</configVersion>
       <userRemoteConfigs>
         <hudson.plugins.git.UserRemoteConfig>
-          <url>https://github.com/Airlon/investimento-produto.git</url>
+          <url>https://github.com/Airlon/investimento-produto</url>
+          <credentialsId>a407fe69-f649-4c83-a0e5-cc58ac0c36cd</credentialsId>
         </hudson.plugins.git.UserRemoteConfig>
       </userRemoteConfigs>
       <branches>

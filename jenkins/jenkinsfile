@@ -6,17 +6,8 @@ pipeline {
                 docker { image 'maven' }
             }
             steps {
-                sh 'echo "Deploy arquivo!"'
+                 sh "mvn package -Dmaven.test.skip=true"
             }
-        }
-    }
-
-    post {
-        success {
-            echo 'Pipeline executado com sucesso!'
-        }
-        failure {
-            echo 'Ocorreu uma falha no pipeline'
         }
     }
 }
